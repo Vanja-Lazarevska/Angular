@@ -1,0 +1,8 @@
+<h3>Car Models</h3>
+<app-filter-options [arrayOfCars]="carsFromParent" (rentedCars)="onShowRented($event)" (availableCars)="onShowAvailable($event)" (resetAllCars)="onReset($event)"></app-filter-options>
+<div class="carContainer">
+<div *ngFor="let car of arrayFromChild ? actualArray : carsFromParent" >
+    <app-car-card [carFromGrandParent]="car" (rentTheCar)="onCarRented($event)" (returnTheCar)="onCarReturned($event)" ></app-car-card>
+</div>
+
+</div>

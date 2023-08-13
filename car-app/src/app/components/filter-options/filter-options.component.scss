@@ -1,0 +1,13 @@
+.filterOptions{
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    background-color: rgba(250, 128, 114, 0.609);
+}
+
+button:hover {
+    background-color: rgb(250, 128, 114);
+    cursor: pointer;
+}
