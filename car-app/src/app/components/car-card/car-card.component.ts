@@ -1,5 +1,6 @@
-import { Component, Input , EventEmitter, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Car } from 'src/app/interfaces/car.interface';
+import { CarService } from 'src/app/service/car.service';
 
 @Component({
   selector: 'app-car-card',
@@ -8,22 +9,19 @@ import { Car } from 'src/app/interfaces/car.interface';
 })
 export class CarCardComponent {
 
-  @Input()
-  carFromGrandParent: Car = {id: 2, model: '', priceToRent: 2, yearOfProduction: '', engineType:'', image:'', isRented: true}
+  constructor(private readonly carService: CarService){}
 
-  @Output()
-  rentTheCar: EventEmitter<number> = new EventEmitter<number>()
+  @Input()
+  car: Car = {} as Car
 
   onRentClick(carId: number) {
-    this.rentTheCar.emit(carId)
-
+    console.log(carId)
+    this.carService.handleRentCar(carId)
   }
-
-  @Output()
-  returnTheCar: EventEmitter<number> = new EventEmitter<number>()
 
   onReturnTheCarClicked(carId: number) {
-    this.returnTheCar.emit(carId)
-
+    console.log(carId)
+    this.carService.handleReturnCar(carId)
   }
+
 }

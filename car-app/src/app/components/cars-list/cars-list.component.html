@@ -1,0 +1,9 @@
+<app-filter-options></app-filter-options>
+<select [(ngModel)]="ascOrDsc">
+    <option value="ascending" selected>Ascending</option>
+    <option value="descending">Descending</option>
+</select>
+
+<section class="carContainer">
+    <app-car-card *ngFor="let car of carsArray | modelFormat: ascOrDsc " [car]="car"></app-car-card>
+</section>

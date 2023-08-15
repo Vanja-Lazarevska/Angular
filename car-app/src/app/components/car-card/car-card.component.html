@@ -1,8 +1,8 @@
 <div class="carCard">
-    <img [src]="carFromGrandParent.image" >
-    <h3> {{carFromGrandParent.model}}</h3>
-    <p>Price: {{carFromGrandParent.priceToRent}}</p>
-    <label class="aveable" [innerText]="carFromGrandParent.isRented ? '' : 'Available'" ></label>
-    <button (click)="onRentClick(carFromGrandParent.id)" *ngIf="!carFromGrandParent.isRented">Rent</button>
-    <button (click)="onReturnTheCarClicked(carFromGrandParent.id)" *ngIf="carFromGrandParent.isRented">Return the car</button>
+    <img [src]="car.image" >
+    <h3> {{car.model}}</h3>
+    <p>Price: {{car.priceToRent}}</p>
+    <label class="aveable" [innerText]="car.isRented ? '' : 'Available'" ></label>
+    <button (click)="onRentClick(car.id)" *ngIf="!car.isRented">Rent</button>
+    <button (click)="onReturnTheCarClicked(car.id)" *ngIf="car.isRented">Return the car</button>
 </div>

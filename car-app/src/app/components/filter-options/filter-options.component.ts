@@ -1,47 +1,27 @@
-import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import { Car } from 'src/app/interfaces/car.interface';
+import { Component } from '@angular/core';
+import { CarService } from 'src/app/service/car.service';
 
 @Component({
   selector: 'app-filter-options',
   templateUrl: './filter-options.component.html',
   styleUrls: ['./filter-options.component.scss']
 })
-export class FilterOptionsComponent implements OnInit{
+export class FilterOptionsComponent {
 
-  copy: Car[] = []
+  constructor(private readonly carsService: CarService){}
 
-  ngOnInit(): Car[] {
-    this.copy = [...this.arrayOfCars]
-    return this.copy
-  
+
+  onShowRented = () => {
+   this.carsService.handleShowRented()
   }
 
-  @Input()
-  arrayOfCars: Car[] = []
-
-  @Output()
-  rentedCars: EventEmitter<Car[]> = new EventEmitter<Car[]>()
-
-  @Output()
-  availableCars: EventEmitter<Car[]> = new EventEmitter<Car[]>()
-
-  @Output()
-  resetAllCars: EventEmitter<Car[]> = new EventEmitter<Car[]>()
-
-
-  handleShowRented() {
-    const arrayOfRentedCars = this.arrayOfCars.filter((car) => car.isRented === true)
-    this.rentedCars.emit(arrayOfRentedCars)
+  onShowAvailabe = () => {
+    this.carsService.handleShowAvailable()
 
   }
 
-  handleShowAvailabe() {
-    const arrayOfAvailableCars = this.arrayOfCars.filter((car) => car.isRented === false)
-    this.availableCars.emit(arrayOfAvailableCars)
-  }
-
-  handleReset() {
-    this.resetAllCars.emit(this.copy)
+  onReset = () => {
+    this.carsService.handleReset()
   }
 
 }
