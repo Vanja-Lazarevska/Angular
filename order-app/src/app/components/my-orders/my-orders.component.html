@@ -1,0 +1,9 @@
+<h1>{{ title }}</h1>
+
+<ul *ngIf="eachOrder.length; else noOrders">
+    <li *ngFor="let item of eachOrder">{{item.name}} {{item.price}}</li>
+</ul>
+
+<ng-template #noOrders>
+    <h2 class="noContent">No products selected yet, go to products page and select yours.</h2>
+</ng-template>
