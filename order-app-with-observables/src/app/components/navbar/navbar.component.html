@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>My App</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="handleShowMenu()">
+        <mat-icon>menu</mat-icon>
+        <div *ngIf="showMenu" class="menu">
+        <button mat-flat-button color="accent" routerLink="/">Home</button>
+        <button mat-flat-button color="accent" routerLink="/products">Products</button>
+        <button mat-flat-button color="accent" routerLink="/myOrders" >My Orders</button>
+        <button mat-flat-button color="accent" routerLink="/about">About</button>
+        </div>
+      </button>
+</mat-toolbar-row>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+
+
