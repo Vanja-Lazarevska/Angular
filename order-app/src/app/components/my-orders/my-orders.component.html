@@ -1,7 +1,7 @@
 <h1>{{ title }}</h1>
 
 <ul *ngIf="eachOrder.length; else noOrders">
-    <li *ngFor="let item of eachOrder">{{item.name}} {{item.price}}</li>
+    <li *ngFor="let item of eachOrder">{{item.name}} {{item.price}} {{item.count}}</li>
 </ul>
 
 <ng-template #noOrders>

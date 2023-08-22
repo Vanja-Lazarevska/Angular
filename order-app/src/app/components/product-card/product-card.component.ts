@@ -14,10 +14,7 @@ export class ProductCardComponent {
   @Input()
   product: Product 
 
-  myOrder: Product
-
   constructor(private readonly productsService: ProductsService){}
-
 
   handleClickOrder = (orderId: number) => {
   this.productsService.decrementInStock(orderId)

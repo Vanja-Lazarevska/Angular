@@ -19,11 +19,12 @@ export class MyOrdersComponent implements OnInit {
   ngOnInit(): void {
     this.myOrders = this.productsService._myOrders
 
-    this.myOrders.forEach((order) => {
-      this.eachOrder = [...this.eachOrder,(this.productsService.findById(order))] 
-
+    this.myOrders.map((order) => {
+      this.eachOrder.push(this.productsService.findById(order))
     }
     )
+
+    console.log(this.eachOrder)
   }
 
 

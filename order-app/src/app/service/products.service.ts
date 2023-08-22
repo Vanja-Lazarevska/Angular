@@ -20,9 +20,8 @@ export class ProductsService {
   decrementInStock = (orderId: number)  => {
     this._products.map((order)=> {
       if(order.id === orderId && order.stock !== 0) {
-
       order.stock  = order.stock - 1
-
+      order.count = order.count + 1
        return order
       }
 
@@ -32,6 +31,7 @@ export class ProductsService {
   }
 
   setMyOrder = (order: number) => {
+
     this._myOrders.push(order)
   }
 

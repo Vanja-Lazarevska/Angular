@@ -8,6 +8,7 @@ export const PRODUCTS :Product[] = [
         price: 599,
         category: "Electronics",
         stock: 2,
+        count: 0
       },
       {
         id: 2,
@@ -16,6 +17,8 @@ export const PRODUCTS :Product[] = [
         price: 39.99,
         category: "Clothing",
         stock: 3,
+        count: 0
+
       },
       {
         id: 3,
@@ -24,6 +27,8 @@ export const PRODUCTS :Product[] = [
         price: 29.95,
         category: "Books",
         stock: 1,
+        count: 0
+
       },
       {
         id: 4,
@@ -32,6 +37,8 @@ export const PRODUCTS :Product[] = [
         price: 19.5,
         category: "Sports",
         stock: 4,
+        count: 0
+
       },
       {
         id: 5,
@@ -40,6 +47,8 @@ export const PRODUCTS :Product[] = [
         price: 899,
         category: "Electronics",
         stock: 0,
+        count: 0
+
       },
       {
         id: 6,
@@ -48,6 +57,8 @@ export const PRODUCTS :Product[] = [
         price: 54.5,
         category: "Clothing",
         stock: 2,
+        count: 0
+
       },
       {
         id: 7,
@@ -56,6 +67,8 @@ export const PRODUCTS :Product[] = [
         price: 15.99,
         category: "Books",
         stock: 0,
+        count: 0
+
       },
       {
         id: 8,
@@ -64,6 +77,8 @@ export const PRODUCTS :Product[] = [
         price: 129.99,
         category: "Sports",
         stock: 5,
+        count: 0
+
       },
       {
         id: 9,
@@ -72,6 +87,8 @@ export const PRODUCTS :Product[] = [
         price: 79.99,
         category: "Electronics",
         stock: 2,
+        count: 0
+
       },
       {
         id: 10,
@@ -80,6 +97,8 @@ export const PRODUCTS :Product[] = [
         price: 29.95,
         category: "Clothing",
         stock: 1,
+        count: 0
+
       },
       {
         id: 11,
@@ -88,6 +107,8 @@ export const PRODUCTS :Product[] = [
         price: 42.5,
         category: "Books",
         stock: 3,
+        count: 0
+
       },
       {
         id: 12,
@@ -96,6 +117,8 @@ export const PRODUCTS :Product[] = [
         price: 34.75,
         category: "Sports",
         stock: 4,
+        count: 0
+
       },
       {
         id: 13,
@@ -104,6 +127,8 @@ export const PRODUCTS :Product[] = [
         price: 449,
         category: "Electronics",
         stock: 0,
+        count: 0
+
       },
       {
         id: 14,
@@ -112,6 +137,8 @@ export const PRODUCTS :Product[] = [
         price: 49.95,
         category: "Clothing",
         stock: 2,
+        count: 0
+
       },
       {
         id: 15,
@@ -120,6 +147,8 @@ export const PRODUCTS :Product[] = [
         price: 9.99,
         category: "Books",
         stock: 1,
+        count: 0
+
       },
       {
         id: 16,
@@ -128,6 +157,8 @@ export const PRODUCTS :Product[] = [
         price: 19.25,
         category: "Sports",
         stock: 0,
+        count: 0
+
       },
       {
         id: 17,
@@ -136,6 +167,8 @@ export const PRODUCTS :Product[] = [
         price: 69.99,
         category: "Electronics",
         stock: 5,
+        count: 0
+
       },
       {
         id: 18,
@@ -144,6 +177,8 @@ export const PRODUCTS :Product[] = [
         price: 64.95,
         category: "Clothing",
         stock: 2,
+        count: 0
+
       },
       {
         id: 19,
@@ -152,6 +187,8 @@ export const PRODUCTS :Product[] = [
         price: 12.5,
         category: "Books",
         stock: 1,
+        count: 0
+
       },
       {
         id: 20,
@@ -160,5 +197,6 @@ export const PRODUCTS :Product[] = [
         price: 89.5,
         category: "Sports",
         stock: 3,
+        count: 0
       }
 ]
