@@ -1,0 +1,61 @@
+<div class="form">
+<form [formGroup]="form" (ngSubmit)="handleSubmit()">
+
+    <div class="form-group">
+        <label>Product name: </label>
+        <input formControlName="name" type="text">
+        <div *ngIf="form.get('name')?.touched && form.get('name')?.invalid">
+            <div class="error" *ngIf="form.get('name')?.hasError('required')">Product name is required !</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Description </label>
+        <textarea formControlName="description"></textarea>
+        <div *ngIf="form.get('description')?.touched && form.get('description')?.invalid">
+            <div class="error" *ngIf="form.get('description')?.hasError('required')">Description for product is required !</div>
+            <div class="error" *ngIf="form.get('description')?.hasError('max')">Description can not be longer then 100 characters !</div>
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Price: </label>
+        <input formControlName="price" type="number">
+        <div *ngIf="form.get('price')?.touched && form.get('price')?.invalid">
+            <div class="error" *ngIf="form.get('price')?.hasError('required')">Price is required !</div>
+            <div class="error" *ngIf="form.get('price')?.hasError('min')">Price can not be lower than 1 !</div>
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Category of product: </label>
+        <select formControlName="category">
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="books">Books</option>
+            <option value="sports">Sports</option>
+        </select>
+        
+        <div *ngIf="form.get('category')?.touched && form.get('category')?.invalid">
+            <div class="error" *ngIf="form.get('category')?.hasError('required')">Category is required !</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>In stock: </label>
+        <input formControlName="stock" type="number">
+        
+        <div *ngIf="form.get('stock')?.touched && form.get('stock')?.invalid">
+            <div class="error" *ngIf="form.get('stock')?.hasError('required')">Stock for product name is required !</div>
+            <div class="error" *ngIf="form.get('stock')?.hasError('min')">Stock for product must be grater than 1 !</div>
+
+        </div>
+    </div>
+
+    <button [disabled]="form.invalid" mat-raised-button color="primary">Add product</button>
+   
+</form>
+
+</div>

@@ -1,0 +1,17 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .menu {
+    width: fit-content;
+    position: relative;
+    right: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+  }
+
+  mat-toolbar-row{
+    z-index: 1001;
+  }

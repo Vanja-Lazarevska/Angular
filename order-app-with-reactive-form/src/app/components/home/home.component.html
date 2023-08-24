@@ -1,0 +1,15 @@
+
+<header>
+<h1>{{ welcomeMessage }}</h1>
+<h1 class="name">{{orderAppName}}</h1>
+</header>
+
+<main>
+    <h3>Click on the button if you want to add some new products !</h3>
+    <button mat-fab color="accent" extended *ngIf="addToProduct" (click)="toggleAddToProduct()">
+        <mat-icon>add</mat-icon>
+        Add product
+      </button>
+
+      <app-add-product *ngIf="!addToProduct" [addToProduct]="toggleAddToProduct" ></app-add-product>
+</main>
