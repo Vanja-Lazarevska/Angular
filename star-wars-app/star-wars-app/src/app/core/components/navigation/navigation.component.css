@@ -1,0 +1,25 @@
+header {
+    border: 1px solid darkblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #134074
+}
+
+ul {
+    display: flex;
+    gap: 50px;
+    padding: 20px;
+    
+
+}
+
+li {
+    list-style-type: none;
+}
+
+li:hover {
+    background-color: #eef4ed;
+    cursor: pointer;
+}
+
