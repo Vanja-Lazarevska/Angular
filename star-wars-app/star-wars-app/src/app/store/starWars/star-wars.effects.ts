@@ -26,7 +26,7 @@ export class StarWarsEffect  {
                     mass: person.mass
             }
             }) 
-
+            
             return fetchPeopleSuccess({people: people})
         })
         )

@@ -1,4 +1,4 @@
-<div class="container" *ngIf="peopleArray.length != 0 ; else noData">
+<div class="container" *ngIf="!isFetching; else noData">
     <app-people-card *ngFor="let person of peopleArray" [onePerson]="person"></app-people-card>
 </div>
 

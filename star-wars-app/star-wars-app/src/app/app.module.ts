@@ -11,7 +11,6 @@ import { AppReducer } from './store/app.state';
 import { StarWarsEffect } from './store/starWars/star-wars.effects';
 import { CoreModule } from './core/core.module';
 import { PeopleModule } from './features/peopleModule/people.module';
-import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -25,9 +24,8 @@ import { RouterModule } from '@angular/router';
     StoreModule.forRoot(AppReducer),
     EffectsModule.forRoot([StarWarsEffect]),
     CoreModule,
-    PeopleModule ,
-    RouterModule  
-    ],
+    PeopleModule     
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

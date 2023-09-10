@@ -13,6 +13,7 @@ export class PeopleComponent implements OnInit{
 
 
   peopleArray : Person[]
+  isFetching: boolean
   constructor(private readonly store: Store<AppState>){}
 
   ngOnInit(): void {
@@ -21,6 +22,10 @@ export class PeopleComponent implements OnInit{
 
     this.store.select('people').subscribe((data)=> {
       this.peopleArray = data.people
+    })
+
+    this.store.select('people').subscribe((data)=> {
+      this.isFetching = data.isFetching
     })
 
 
