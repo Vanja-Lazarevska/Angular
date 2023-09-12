@@ -1,0 +1,29 @@
+
+mat-toolbar{
+    
+    background-color: #d4a373;
+    box-shadow: -1px 10px 14px -2px #a17b56;
+    padding: 10px; 
+
+}
+
+.active {
+    color: white
+}
+
+
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  div {
+    margin-right: 3%;
+    cursor: pointer;
+  }
+
+  div:hover {
+    background-color:rgba(95, 158, 160, 0.343);
+    border-radius: 5px;
+  }
+

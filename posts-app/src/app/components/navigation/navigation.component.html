@@ -1,0 +1,14 @@
+
+<mat-toolbar>
+    <button  routerLink routerLink="/"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact:true}" mat-icon-button class="example-icon" aria-label="Example icon-button with home icon">
+     <mat-icon  >home</mat-icon>
+   </button>
+   <span>Posts App</span>
+   <span class="example-spacer"></span>
+   <div routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">About</div>
+  <div routerLink="/posts"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{exact:true}">Posts</div>
+</mat-toolbar>

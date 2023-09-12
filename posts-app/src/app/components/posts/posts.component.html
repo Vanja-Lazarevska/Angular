@@ -1,0 +1,10 @@
+<app-post-card *ngFor="let post of allPosts" [post]="post"></app-post-card>
+
+
+
+
+<div class="example-button-container">
+    <button routerLink="/create-post" color="warn" mat-mini-fab  aria-label="Example icon button with a home icon">
+        <mat-icon>add</mat-icon>
+    </button>
+  </div>

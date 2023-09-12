@@ -1,0 +1,83 @@
+<div class="form">
+    <form [formGroup]="postForm" (ngSubmit)="handleSubmit()">
+    <mat-card>
+            <mat-card-title>
+              Add new post
+            </mat-card-title>
+    
+            <mat-card-content>
+                <mat-form-field appearance="outline">
+                    <mat-label>Post title</mat-label>
+                <input matInput formControlName="title" type="text" id="title" placeholder="Title">
+                <mat-error *ngIf="postForm.get('title')?.hasError('required')">
+                  Title is required !
+                </mat-error>
+                <mat-error *ngIf="postForm.get('title')?.hasError('max')">
+                  Title can have maximum 50 characters!
+                </mat-error>
+            </mat-form-field>
+
+    
+                <mat-form-field appearance="outline">
+                    <mat-label>Content</mat-label>
+                    <input matInput formControlName="content" type="text" id="content">
+                    <mat-error *ngIf="postForm.get('content')?.hasError('required')">
+                      Content is required !
+                    </mat-error>
+                    <mat-error *ngIf="postForm.get('content')?.hasError('max')">
+                      Content can have maximum 100 characters!
+                    </mat-error>
+                  </mat-form-field>
+
+                        
+                <mat-form-field appearance="outline">
+                    <mat-label>Author</mat-label>
+                    <input matInput formControlName="author" type="text" id="author">
+                    <mat-error *ngIf="postForm.get('author')?.hasError('required')">
+                      Author  is required !
+                    </mat-error>
+                </mat-form-field>
+
+
+            <mat-form-field>                 
+                <input  matInput [ngxMatDatetimePicker]="pickerCustomIcon" placeholder="Choose a date"
+                  formControlName='createdAt' >
+                <ngx-mat-datepicker-toggle matSuffix [for]="pickerCustomIcon"></ngx-mat-datepicker-toggle>
+                <ngx-mat-datetime-picker #pickerCustomIcon >
+                  <ngx-mat-datepicker-actions >
+                    <button mat-button ngxMatDatepickerCancel>Cancel</button>
+                    <button mat-raised-button color="primary" ngxMatDatepickerApply>Apply</button>
+                  </ngx-mat-datepicker-actions>
+                </ngx-mat-datetime-picker>
+                <mat-error *ngIf="postForm.get('createdAt')?.hasError('required')">
+                  Created at field is required !
+                </mat-error>
+              </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Likes</mat-label>
+                    <input matInput formControlName="likes" type="number" id="likes">
+                </mat-form-field>
+            </mat-card-content>
+    
+            <mat-card-actions>
+                <div class="button">
+                    <button mat-raised-button color="primary" [disabled]="postForm.invalid">Submit</button>
+                </div>
+              </mat-card-actions>
+        </mat-card>
+    </form>
+    </div>
+    <h3>{{message}}</h3>
+
+    
+    <div class="example-button-container">
+        <button routerLink="/posts"mat-fab color="warn" aria-label="Example icon button with a home icon">
+          <mat-icon>arrow_left_alt</mat-icon>
+        </button>
+    </div>
+
+
+
+
+
